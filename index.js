@@ -4,6 +4,10 @@ const fs = require('fs');
 const Enmap = require('enmap');
 const utils = require('./utils');
 
+// trata erros
+process.on('unhandledRejection', e => {});
+process.on('uncaughtException', e => {});
+process.on('uncaughtRejection', e => {});
 
 if (!process.env.TOKEN){
   try{
