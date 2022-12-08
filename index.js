@@ -8,6 +8,10 @@ const utils = require('./utils');
 process.on('unhandledRejection', e => {});
 process.on('uncaughtException', e => {});
 process.on('uncaughtRejection', e => {});
+process.on('uncaughtExceptionMonitor', e => {});
+process.on('multipleResolves', e => {});
+process.on('uncaughtException', e => {});
+
 
 if (!process.env.TOKEN){
   try{
